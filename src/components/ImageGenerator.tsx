@@ -10,7 +10,7 @@ const ImageGenerator: React.FC = () => {
       e.preventDefault();
       setIsLoading(true);
       setIsCompleted(false);
-      const response = await fetch("http://localhost:5000/generate", {
+      const response = await fetch("https://new-ai-image-3a8105055438.herokuapp.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

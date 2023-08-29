@@ -4,7 +4,7 @@ import openai
 import logging
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://new-ai-front-1c9059249bcc.herokuapp.com/"}})
+CORS(app, resources={r"/*": {"origins": "https://new-ai-front-1c9059249bcc.herokuapp.com"}})
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)

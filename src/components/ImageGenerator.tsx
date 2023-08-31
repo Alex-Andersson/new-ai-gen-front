@@ -10,13 +10,14 @@ const ImageGenerator: React.FC = () => {
       e.preventDefault();
       setIsLoading(true);
       setIsCompleted(false);
-      const response = await fetch("https://new-ai-image-3a8105055438.herokuapp.com/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt: prompt }),
-      });
+const response = await fetch("https://new-ai-image-3a8105055438.herokuapp.com/generate", {
+    method: "POST",
+    mode: 'cors',  // <-- Add this
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ prompt: prompt }),
+});
       const data = await response.json();
       setImageSrcs(data.urls);
       setIsLoading(false);
